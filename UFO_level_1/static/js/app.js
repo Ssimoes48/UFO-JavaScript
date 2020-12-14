@@ -29,16 +29,12 @@ function enterDate() {
 
     var inputDate = d3.select("#datetime").property("value");
 
-    console.log(inputDate);
-
     if (inputDate){ 
         var filteredDate = sightings.filter(sighting => sighting.datetime === inputDate);
     }
     else { 
         var filteredDate = sightings;
     }
-
-    console.log(filteredDate);
 
     tbody.html("");
 

@@ -20,29 +20,46 @@ var button = d3.select("#filter-btn");
 
 var form = d3.select("form");
 
-button.on("click", enterDate);
-form.on("submit", enterDate);
+button.on("click", enterData);
+form.on("submit", enterData);
 
-function enterDate() {
+function enterData() {
 
     d3.event.preventDefault();
 
     var inputDate = d3.select("#datetime").property("value");
 
-    console.log(inputDate);
+    var inputCity = d3.select("#city").property("value").toLowerCase().trim();
 
-    if (inputDate){ 
-        var filteredDate = sightings.filter(sighting => sighting.datetime === inputDate);
+    var inputState = d3.select("#state").property("value").toLowerCase().trim();
+
+    var inputCountry = d3.select("#country").property("value").toLowerCase().trim();
+
+    var inputShape = d3.select("#shape").property("value").toLowerCase().trim();
+
+
+    if (inputDate) { 
+        var filteredData = sightings.filter(sighting => sighting.datetime === inputDate);
+    }
+    else if (inputCity) { 
+        var filteredData = sightings.filter(sighting => sighting.city === inputCity);
+    }
+    else if (inputState) { 
+        var filteredData = sightings.filter(sighting => sighting.state === inputState);
+    }
+    else if (inputCountry) { 
+        var filteredData = sightings.filter(sighting => sighting.country === inputCountry);
+    }
+    else if (inputShape) { 
+        var filteredData = sightings.filter(sighting => sighting.shape === inputShape);
     }
     else { 
-        var filteredDate = sightings;
+        var filteredData = sightings;
     }
-
-    console.log(filteredDate);
 
     tbody.html("");
 
-    filteredDate.forEach(sighting => {
+    filteredData.forEach(sighting => {
 
         var row = tbody.append("tr");
     
