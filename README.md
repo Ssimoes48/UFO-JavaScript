@@ -12,7 +12,7 @@ JavaScript and DOM Manipulation
 
 ## General info
 
-![UFO](Images/ufo.png)
+![UFO](Images/sheeple.png)
 
 ## Technologies
 
