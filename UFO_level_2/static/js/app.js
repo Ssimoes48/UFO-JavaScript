@@ -18,12 +18,14 @@ sightings.forEach(sighting => {
 
 var button = d3.select("#filter-btn");
 
-var form = d3.select("form");
+var form = d3.select(".gretel-is-awesome");
+console.log(form);
 
 button.on("click", enterData);
 form.on("submit", enterData);
 
 function enterData() {
+console.log("hello_world");
 
     d3.event.preventDefault();
 
@@ -37,25 +39,25 @@ function enterData() {
 
     var inputShape = d3.select("#shape").property("value").toLowerCase().trim();
 
+    var filteredData = sightings;
+
 
     if (inputDate) { 
-        var filteredData = sightings.filter(sighting => sighting.datetime === inputDate);
+        var filteredData = filteredData.filter(sighting => sighting.datetime === inputDate);
     }
-    else if (inputCity) { 
-        var filteredData = sightings.filter(sighting => sighting.city === inputCity);
+    if (inputCity) { 
+        var filteredData = filteredData.filter(sighting => sighting.city === inputCity);
     }
-    else if (inputState) { 
-        var filteredData = sightings.filter(sighting => sighting.state === inputState);
+    if (inputState) { 
+        var filteredData = filteredData.filter(sighting => sighting.state === inputState);
     }
-    else if (inputCountry) { 
-        var filteredData = sightings.filter(sighting => sighting.country === inputCountry);
+    if (inputCountry) { 
+        var filteredData = filteredData.filter(sighting => sighting.country === inputCountry);
     }
-    else if (inputShape) { 
-        var filteredData = sightings.filter(sighting => sighting.shape === inputShape);
+    if (inputShape) { 
+        var filteredData = filteredData.filter(sighting => sighting.shape === inputShape);
     }
-    else { 
-        var filteredData = sightings;
-    }
+    
 
     tbody.html("");
 
