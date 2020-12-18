@@ -7,6 +7,7 @@ JavaScript and DOM Manipulation
 * [Table Setup](#table-setup)
 * [Filter Button](#filter-button)
 * [Example](#example)
+* [Conclusion](#conclusion)
 * [Contact](#contact)
 
 ## General info
@@ -71,6 +72,8 @@ When user inputs criteria into the different input fields, the table is filtered
 ![Filter](Images/filter_example.PNG)
 
 When the fields are empty, and the filter button is selected the table will re-load to original full dataset table. 
+
+## Conclusion 
 
 As you can see from the numerous accounts in 2010, there *is* something out there… 
 
