@@ -1,5 +1,5 @@
 # UFO-JavaScript
-JavaScript and DOM Manipulation
+*JavaScript and DOM Manipulation*
 
 ## Table of contents
 * [General info](#general-info)
