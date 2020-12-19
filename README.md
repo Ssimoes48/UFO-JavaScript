@@ -12,7 +12,7 @@
 
 ## General info
 
-WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `ALIENS-R-REAL` have collected all of the eye-witness reports we could to prove it! I have created a dynamic table based on the dataset that can be searched based on 5 key criteria related to the sightings:
+WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we at `ALIENS-R-REAL` have collected all eye-witness reports to prove it! I have created a dynamic table based on the dataset that can be searched based on 5 key criteria related to the sightings:
 
 * Date/Time of sighting
 * City of sighting
@@ -30,9 +30,9 @@ WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `
 * D3.js
 
 ## Table Setup
-First, I reviewed the dataset which includes detailed accounts of alien sightings during the year 2010. The data is an array of objects. Each object represents a specific sighting and includes data pertaining to the time, location, shape of even, duration of event, and comments given by observer. 
+First, I reviewed the dataset which includes detailed accounts of alien sightings during the year 2010. The data is an array of objects. Each object represents a specific sighting and includes data pertaining to the time, location, shape of event, duration of event, and comments given by the observer. 
 
-I compiled this data into a table that populates on the UFO website when you arrive at the landing page. To create the table, I used a `forEach` statement to go through my sightings data and `.append` the table with the data in each cell. 
+I compiled this data into a table that populates on the UFO website when you open the landing page. To create the table, I used a `forEach` statement to go through my sightings data and `.append` the table with the data in each cell. 
 
 ![Create Table](Images/create_table_code.PNG)
 
@@ -57,7 +57,7 @@ If data is input in any combination of these fields, the table will filter on th
 
 ![Enter Data](Images/enter_data.PNG)
 
-When the fields are empty and the “filter” button is selected, the table will rest to the full list of sightings. To create this, I used `if` statements as per below:
+When the fields are empty and the “filter” button is selected, the table will reset to the full list of sightings. To create this, I used `if` statements as per below:
 
 ![If Statements](Images/if_code.PNG)
 
